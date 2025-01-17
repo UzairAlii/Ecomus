@@ -1,0 +1,26 @@
+.Accessories-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  
+  .Accessories-header {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to right, #f7ecec, #e3f2f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .Accessories-header h1 {
+    font-size: 2.3rem;
+    color: #000;
+    font-weight: 400;
+  }
+  .pagination button{
+    border: 1px solid rgba(0, 0, 0, 0.17);
+  }

@@ -1,0 +1,14 @@
+.light-border{
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+    outline: none;
+    
+}
+.light-border:focus{
+    border: 2px solid #0b7fab;
+    transition: border 0.1s;
+}
+

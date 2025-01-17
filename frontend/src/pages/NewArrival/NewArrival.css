@@ -1,0 +1,201 @@
+.NewArrival-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.NewArrival-header {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right, #f7ecec, #e3f2f9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.NewArrival-header h1 {
+  font-size: 2.3rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+}
+
+.cross-icon {
+  color: black;
+  font-size: 20px;
+}
+
+.filter-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s ease-in-out;
+  height: 100%;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  background-color: white;
+  z-index: 1000;
+}
+
+@media (max-width : 800px){
+  .filter-items {
+    width: 90%;
+  }
+}
+@media (max-width : 400px){
+  .filter-items {
+    width: 90%;
+  }
+}
+
+.showFilter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 80vw;
+  transform: translateX(0);
+  padding: 20px;
+  background-color: white;
+  color: black;
+  overflow-y: scroll;
+  box-shadow: -19px 0px 57px -1px black;
+}
+
+.Product-categories {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.filter-price {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.filter-sizes{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+
+.expanded .filter-links{
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+.expanded .filter-price-items{
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+.expanded .filter-sizes{
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.collapsed .filter-links {
+  display: none;
+  animation: slideUp 0.3s ease forwards;
+}
+.collapsed .filter-price-items{
+  display: none;
+  animation: slideUp 0.3s ease forwards;
+}
+.collapsed .filter-sizes{
+  display: none;
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.Product-categories-header .plus-icon{
+  display: block;
+  transition: all 1s ease;
+}
+.Price-header .plus-icon{
+  display: block;
+  transition: all 1s ease;
+}
+
+.price-display input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin: 15px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dual-slider-container {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #f00;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  position: absolute;
+}
+
+.price-slider:hover {
+  opacity: 1;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #f00;
+  border-radius: 50%;
+  cursor: pointer;
+}

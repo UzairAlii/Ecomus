@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+select, input, textarea{
+    border: 1px solid black;
+    outline-color: rgb(132, 155, 255);
+    border-radius: 5px;
+}
+
+textarea{
+    max-height: 20vh;
+}
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+  }
