@@ -47,7 +47,7 @@ const Product = () => {
 
   const handlePreviousImage = () => {
     setSlideDirection('slide-right');
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + productData.img.length) % productData.img.length);
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + productData.image.length) % productData.image.length);
   };
 
   useEffect(() => {

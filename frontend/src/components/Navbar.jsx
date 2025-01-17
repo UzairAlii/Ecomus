@@ -111,7 +111,7 @@ const Navbar = () => {
                     </div>
                 )}
 
-                <ul className={`menu ${isMenuOpen ? 'showMenu' : ''} z-[1001]`}>
+                <ul className={`menu ${isMenuOpen ? 'showMenu' : ''} z-[1001] flex items-center`}>
                     <div className='flex items-center gap-4 back-icons' onClick={ToggleNav}>
                         <FontAwesomeIcon icon={faChevronLeft} className='close' />
                         <p className='[@media(max-width : 800px)]:hidden'>Back</p>
@@ -165,6 +165,16 @@ const Navbar = () => {
                             </NavLink>
                         )}
                     </div>
+
+                    {/* admin panel button */}
+
+                    <div>
+                        <a href="https://ecomus-admin-alpha.vercel.app/login" target="_blank" rel="noopener noreferrer">
+                            <button className="bg-black text-white py-2 px-4 rounded-md">Admin Panel</button>
+                        </a>
+                    </div>
+
+
                 </ul>
             </div>
 
@@ -248,8 +258,8 @@ const Navbar = () => {
                     {token && email && (
                         <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-[1000]">
                             <div className='h-fit flex flex-col gap-2 py-3 px-5 bg-slate-100 text-gray-500 rounded-md'>
-                            <p>{email}</p>
-                            <p onClick={()=> setToken('')} className='cursor-pointer'>Logout</p>
+                                <p>{email}</p>
+                                <p onClick={() => setToken('')} className='cursor-pointer'>Logout</p>
                             </div>
                         </div>
                     )}
