@@ -40,7 +40,7 @@ const Verify = () => {
     }, [token])
 
   return (
-    <div>verify</div>
+    <div></div>
   )
 }
 

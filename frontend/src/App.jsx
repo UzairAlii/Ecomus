@@ -28,7 +28,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login/Login';
 import PrivateRoute from './components/PrivateRoute';
 import { ShopContext } from './context/ShopContext';
-import Verify from './pages/verify';
+import Verify from './pages/Verify';
 
 const App = () => {
   const { token } = useContext(ShopContext);
