@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { Images } from '../../assets/assets'
+import { Images } from '../../assets/assets.js'
 import { NavLink } from 'react-router-dom'
 
 const catogeries = () => {
